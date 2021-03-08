@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import {Link} from "react-router-dom";
+import {IoHome} from 'react-icons/io5'
+import { FaPlusCircle } from 'react-icons/fa'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+import GlobalStyle from './styles/Global';
+
+import Routes from './routes';
+
+const App: React.FC = () => (
+  <>
+    <GlobalStyle />
+    <BrowserRouter>
+      <header>
+        <Link to="/" >
+            <IoHome size={30}/>
+        </Link>
+        <Link to="/newdevice" >
+          <FaPlusCircle size={30}/>
+        </Link>
       </header>
-    </div>
+      
+      <Routes />
+    </BrowserRouter>
+  </>
   );
-}
 
 export default App;
