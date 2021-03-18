@@ -22,22 +22,24 @@ export const ListDevices = styled.div`
 export const Device = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1rem;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border-radius: 30px;
   background-color: #324368;
   margin-right: 30px;
   margin-bottom: 40px;
 
   strong {
-    margin: 12px 0 8px 0;
+    margin: 12px 0 16px 0;
     font-size: 24px;
     color: #fff;
   }
 
   p {
-    font-size: 18px;
+    margin-top: 12px;
+    font-size: 20px;
   }
 
   svg {
